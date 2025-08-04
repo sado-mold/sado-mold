@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사도정밀 - 정밀 금형 전문</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background-color: #fff; color: #333; }
+    header { background-color: #e60000; padding: 1rem; text-align: center; color: white; }
+    header img { height: 50px; background: transparent; }
+    nav { background-color: #f2f2f2; padding: 0.5rem; text-align: center; }
+    nav a { margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold; }
+    section { padding: 2rem; max-width: 1000px; margin: auto; }
+    footer { background-color: #222; color: white; padding: 1rem; text-align: center; }
+    .equipment { position: relative; }
+    .slideshow-container { position: relative; max-width: 100%; margin: auto; }
+    .slide { display: none; }
+    .slide img { width: 100%; height: auto; }
+    .contact-form { margin-top: 2rem; }
+    input, textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; }
+    button { padding: 0.7rem 1.5rem; background-color: #e60000; color: white; border: none; cursor: pointer; }
+    @media screen and (max-width: 768px) {
+      nav a { display: inline-block; margin: 0.5rem 0.7rem; }
+      section { padding: 1rem; }
+    }
+  </style>
+  <script>
+    let slideIndex = 0;
+    function showSlides() {
+      const slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+    window.onload = showSlides;
+  </script>
+</head>
+<body>
+  <header>
+    <img src="./logo.png" alt="사도정밀 로고">
+    <h1>사도정밀</h1>
+    <p>고객과 제품을 먼저 생각하는 회사</p>
+  </header>
+
+  <nav>
+    <a href="#about">회사 소개</a>
+    <a href="#equipment">보유 장비</a>
+    <a href="#contact">문의</a>
+  </nav>
+
+  <section id="about">
+    <h2>회사 소개</h2>
+    <p><strong>위치:</strong> 경기도 화성시 양감면 정문송산로 206-17</p>
+    <p><strong>설립연도:</strong> 2014년</p>
+    <p><strong>주요 서비스:</strong> 정밀 금형 제작 및 금형 수리</p>
+    <p><strong>대표 인사말:</strong><br>
+      안녕하세요, 사도정밀입니다. 우리는 2014년 창립 이후 정밀 금형 분야에서 축적된 기술력과 노하우를 바탕으로 고객 맞춤형 금형 제작과 신속한 수리 서비스를 제공하고 있습니다. ‘고객과 제품을 먼저 생각하는 회사’라는 모토 아래, 한결같은 품질과 책임감으로 최고의 만족을 드릴 것을 약속드립니다.
+    </p>
+  </section>
+
+  <section id="equipment" class="equipment">
+    <h2>보유 장비</h2>
+    <ul>
+      <li>CNC 기계</li>
+      <li>와이어 컷</li>
+      <li>밀링 머신</li>
+      <li>슈퍼드릴</li>
+      <li>연마기</li>
+      <li>방전기</li>
+    </ul>
+    <div class="slideshow-container">
+      <div class="slide"><img src="./cnc_machine.jpg" alt="CNC 장비"></div>
+      <div class="slide"><img src="./wire_machine.jpg" alt="와이어 기계"></div>
+      <div class="slide"><img src="./milling.jpg" alt="밀링 머신"></div>
+      <div class="slide"><img src="./superdrill.jpg" alt="슈퍼드릴"></div>
+      <div class="slide"><img src="./grinder.jpg" alt="연마기"></div>
+      <div class="slide"><img src="./edm.jpg" alt="방전기"></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>문의하기</h2>
+    <p>이메일: <a href="mailto:sado2014@sado-mold.co.kr">sado2014@sado-mold.co.kr</a></p>
+    <div class="contact-form">
+      <form action="mailto:sado2014@sado-mold.co.kr" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="이름" required>
+        <input type="email" name="email" placeholder="이메일" required>
+        <textarea name="message" placeholder="문의 내용" rows="5" required></textarea>
+        <button type="submit">보내기</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 사도정밀. All rights reserved.</p>
+  </footer>
+</body>
+</html>
